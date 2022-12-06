@@ -10,6 +10,8 @@ def hello_world():
 
 @app.route("/user/<username>")
 def profile(username):
+    {"matthieu": {"skills": ["python", "data science", "dev web"]}, "philippe": {}}
+
     return f"{username}'s profile"
 
 
