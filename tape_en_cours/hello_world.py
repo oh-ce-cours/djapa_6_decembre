@@ -1,1 +1,1 @@
-print("salut les copains")
+2+"2"
