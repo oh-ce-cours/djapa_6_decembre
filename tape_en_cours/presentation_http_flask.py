@@ -15,9 +15,7 @@ def profile(username):
         "philippe": {"skills": ["python", "CPL moyenne tension"]},
     }
     if username in profiles:
-        skills = "".join(
-            ["<li>" + skill + "</li>" for skill in profiles[username]["skills"]]
-        )
+        skills = "".join(["<li>" + skill + "</li>" for skill in profiles["skills"]])
         return f"skills for {username}: <ul>{skills}</ul>"
 
 
