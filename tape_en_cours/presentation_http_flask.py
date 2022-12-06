@@ -15,6 +15,14 @@ def profile(username):
         "philippe": {"skills": ["python", "CPL moyenne tension"]},
     }
     if username in profiles:
+        """skills for {{ username }}:
+        <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+        </ul>
+        """
+
         skills = "".join(
             ["<li>" + skill + "</li>" for skill in profiles[username]["skills"]]
         )
