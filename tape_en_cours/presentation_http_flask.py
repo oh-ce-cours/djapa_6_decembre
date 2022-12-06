@@ -10,7 +10,7 @@ def hello_world():
 
 @app.route("/user/<username>")
 def profile(username):
-    {
+    profiles = {
         "matthieu": {"skills": ["python", "data science", "dev web"]},
         "philippe": {"skills": ["python", "CPL moyenne tension"]},
     }
