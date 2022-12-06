@@ -14,8 +14,9 @@ def profile(username):
         "matthieu": {"skills": ["python", "data science", "dev web"]},
         "philippe": {"skills": ["python", "CPL moyenne tension"]},
     }
-
-    return f"{username}'s profile"
+    if username in profiles:
+        skills = "".join(["<li>" + skill + "</li>" for skill in profiles["skills"]])
+        return f"skills for {username}: <ul>{skills}</ul>"
 
 
 if __name__ == "__main__":
