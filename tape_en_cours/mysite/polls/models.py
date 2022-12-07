@@ -7,7 +7,7 @@ from django.utils import timezone
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField("date published")
-    owner = models.ForeignKey("User", on_delete=models.CASCADE)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     def was_published_recently(self: "Question") -> bool:
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
