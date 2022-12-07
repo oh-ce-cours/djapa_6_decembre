@@ -36,7 +36,7 @@ class QuestionAdmin(admin.ModelAdmin):
     def get_queryset(self, request):
         queryset = super().get_queryset()
         if not request.user.is_superuser:
-            queryset.filter(owner=request.user)
+            queryset = queryset.filter(owner=request.user)
         return queryset
 
 
