@@ -31,5 +31,13 @@ class QuestionAdmin(admin.ModelAdmin):
     date_hierarchy = "pub_date"
 
 
+class ChoiceAdmin(admin.ModelAdmin):
+    def get_field_queryset(self, db, db_field, request):
+        queryset = super().get_field_queryset(db, db_field, request)
+        if db_field.name == "school":
+            queryset = queryset.order_by("name")
+        return queryset
+
+
 admin.site.register(Question, QuestionAdmin)
-admin.site.register(Choice)
+admin.site.register(Choice, ChoiceAdmin)
