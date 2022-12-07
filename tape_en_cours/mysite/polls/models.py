@@ -23,7 +23,3 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
-
-
-q = Question.objects.first()
-a = q.was_published_recently() + "tiit"
