@@ -4,7 +4,7 @@ from .models import Question, Choice
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    list_display = ("last_name", "first_name")
+    list_display = ("question_text", "pub_date")
 
 
 admin.site.register(Question, QuestionAdmin)
