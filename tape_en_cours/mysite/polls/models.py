@@ -10,7 +10,6 @@ class Question(models.Model):
     pub_date = models.DateTimeField("date published")
 
     def was_published_recently(self: "Question") -> bool:
-        """Fonction pour savoir si l'on est publié récemment."""
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
     def __str__(self):
