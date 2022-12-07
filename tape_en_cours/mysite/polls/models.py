@@ -10,6 +10,8 @@ class Question(models.Model):
     pub_date = models.DateTimeField("date published")
 
     def was_published_recently(self: "Question") -> bool:
+        """
+        tr"""
         return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
 
     def __str__(self):
