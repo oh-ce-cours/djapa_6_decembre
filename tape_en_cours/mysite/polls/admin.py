@@ -17,7 +17,7 @@ class SearchByYear(admin.SimpleListFilter):
             .values_list("y", flat=True)
             .distinct()
         )
-        return [(str(y), _(str(y))) for y in year_list]
+        return [(str(y), (str(y))) for y in year_list]
 
     def queryset(self, request, queryset):
         if self.value() is not None:
