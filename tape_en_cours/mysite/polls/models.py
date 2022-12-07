@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+
+class Student(models.Model):
+    FRESHMAN = "FR"
+    SOPHOMORE = "SO"
+    JUNIOR = "JR"
+    SENIOR = "SR"
