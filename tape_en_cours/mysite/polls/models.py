@@ -6,4 +6,4 @@ class Client(models.Model):
     date_de_naissance = models.DateField()
 
     def __str__(self):
-        return f"{self.prenom} - {self.age} ans"
+        return f"{self.prenom} - {self.date_de_naissance} ans"
