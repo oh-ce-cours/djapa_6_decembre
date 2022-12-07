@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Student(models.Model):
+class Client(models.Model):
     FRESHMAN = "FR"
     SOPHOMORE = "SO"
     JUNIOR = "JR"
