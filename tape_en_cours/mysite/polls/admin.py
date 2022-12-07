@@ -21,7 +21,7 @@ class SearchByYear(admin.SimpleListFilter):
 
     def queryset(self, request, queryset):
         if self.value() is not None:
-            return queryset.filter(date__year=self.value())
+            return queryset.filter(pub_date__year=self.value())
         return queryset
 
 
