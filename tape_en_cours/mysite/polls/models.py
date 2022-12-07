@@ -6,4 +6,4 @@ class Client(models.Model):
     age = models.PositiveSmallIntegerField()
 
     def __str__(self):
-        return f"Client: {self.prenom} - {self.age} ans"
+        return f"{self.prenom} - {self.age} ans"
