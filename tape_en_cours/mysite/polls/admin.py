@@ -26,7 +26,9 @@ class SearchByYear(admin.SimpleListFilter):
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    order_by = ["pub_date"]
+    class Meta:
+        order_by = ["pub_date"]
+
     list_display = ("question_text", "pub_date")
     list_filter = ("pub_date", SearchByYear)
     date_hierarchy = "pub_date"
