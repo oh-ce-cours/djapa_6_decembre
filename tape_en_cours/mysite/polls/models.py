@@ -25,4 +25,4 @@ class Choice(models.Model):
 
 
 q = Question.objects.first()
-q.was_published_recently() + "tiit"
+a = q.was_published_recently() + "tiit"
