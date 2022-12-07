@@ -7,7 +7,7 @@ from django.db.models.functions import ExtractYear
 
 
 class SearchByYear(admin.SimpleListFilter):
-    title = _("title")
+    title = "title"
     parameter_name = "year"
 
     def lookups(self, request, model_admin):
