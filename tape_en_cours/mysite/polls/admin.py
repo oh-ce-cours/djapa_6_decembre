@@ -34,7 +34,7 @@ class QuestionAdmin(admin.ModelAdmin):
     date_hierarchy = "pub_date"
 
     def get_queryset(self, request):
-        queryset = super().get_queryset()
+        queryset = super().get_queryset(request)
         if not request.user.is_superuser:
             queryset = queryset.filter(owner=request.user)
         return queryset
