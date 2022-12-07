@@ -27,3 +27,4 @@ class Choice(models.Model):
 
 q = Question.objects.first()
 a = q.was_published_recently() + "tiit"
+True + "toto"
