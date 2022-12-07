@@ -33,6 +33,12 @@ class QuestionAdmin(admin.ModelAdmin):
     list_filter = ("pub_date", SearchByYear)
     date_hierarchy = "pub_date"
 
+    def get_queryset(self, request):
+        queryset = super().get_queryset()
+        if not request.user.is_superuser:
+            queryset.filter(owner=request.user)
+        return queryset
+
 
 class ChoiceAdmin(admin.ModelAdmin):
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
