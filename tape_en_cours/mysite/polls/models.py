@@ -2,7 +2,4 @@ from django.db import models
 
 
 class Client(models.Model):
-    FRESHMAN = "FR"
-    SOPHOMORE = "SO"
-    JUNIOR = "JR"
-    SENIOR = "SR"
+    prenom = models.CharField(max_length=50)
