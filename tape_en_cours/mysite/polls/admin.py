@@ -3,7 +3,7 @@ from django.contrib import admin
 from .models import Question, Choice
 
 
-from django.db.models.functions import ExtractYear
+from django.db.models.functions import ExtractYear, Lower
 
 
 class SearchByYear(admin.SimpleListFilter):
