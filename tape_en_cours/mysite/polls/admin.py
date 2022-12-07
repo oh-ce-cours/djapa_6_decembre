@@ -12,7 +12,7 @@ class SearchByYear(admin.SimpleListFilter):
 
     def lookups(self, request, model_admin):
         year_list = (
-            models.Event.objects.annotate(y=ExtractYear("date"))
+            Question.objects.annotate(y=ExtractYear("pub_date"))
             .order_by("y")
             .values_list("y", flat=True)
             .distinct()
