@@ -39,7 +39,7 @@ class ChoiceAdmin(admin.ModelAdmin):
         formfield = super().formfield_for_foreignkey(db_field, request, **kwargs)
 
         if db_field.name == "question":
-            formfield.queryset = Question.objects.order_by(Lower("question_text"))
+            formfield.queryset.order_by(Lower("question_text"))
         return formfield
 
 
