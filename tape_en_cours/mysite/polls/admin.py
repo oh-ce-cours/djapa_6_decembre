@@ -37,8 +37,8 @@ class QuestionAdmin(admin.ModelAdmin):
 class ChoiceAdmin(admin.ModelAdmin):
     def get_field_queryset(self, db, db_field, request):
         queryset = super().get_field_queryset(db, db_field, request)
-        # if db_field.name == "question":
-        #     queryset = queryset.order_by("question_text")
+        if queryset and db_field.name == "question":
+            queryset = queryset.order_by("question_text")
         print(queryset)
         return queryset
 
