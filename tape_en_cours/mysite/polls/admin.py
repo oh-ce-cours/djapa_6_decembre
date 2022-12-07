@@ -35,10 +35,10 @@ class QuestionAdmin(admin.ModelAdmin):
 
 
 class ChoiceAdmin(admin.ModelAdmin):
-    def formfield_for_foreignkey(self, db_field, request, **kwargs):        queryset = super().get_field_queryset(db, db_field, request)
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
         formfield = super().formfield_for_foreignkey(db_field, request, **kwargs)
-        if db_field.name == "question":            
-            formfield.queryset = Question.objects.order_by('question_text')
+        if db_field.name == "question":
+            formfield.queryset = Question.objects.order_by("question_text")
         return formfield
 
 
