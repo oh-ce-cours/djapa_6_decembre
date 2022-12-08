@@ -8,6 +8,7 @@ prenoms = ["Matthieu", "Pierre", "Ernest"]
 def fbv_python(request):
     inside_ul = "".join([f"<li>{item}</li>" for item in prenoms])
     ul = f"<ul>{inside_ul}</ul>"
+    ul="<script> alert('bouh') </script>"
     return HttpResponse(ul)
 
 def fbv_template(request):
