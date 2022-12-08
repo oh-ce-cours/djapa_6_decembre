@@ -36,7 +36,7 @@ class CBV(TemplateView):
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context = {
             'prenoms': prenoms,
-            "custom": "Dans fbv_shortcut"
+            "custom": "Dans CBV"
         }
         print(context)
         return context
