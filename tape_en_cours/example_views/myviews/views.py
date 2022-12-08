@@ -20,7 +20,12 @@ def fbv_template(request):
     return HttpResponse(template.render(context, request))
 
 def fbv_shortcut(request):
-    pass 
+    return render(request, "myviews/index.html") 
+    template = loader.get_template('myviews/index.html')
+    context = {
+        'prenoms': prenoms,
+    }
+    return HttpResponse(template.render(context, request))
 
 class cbv:
     pass 
