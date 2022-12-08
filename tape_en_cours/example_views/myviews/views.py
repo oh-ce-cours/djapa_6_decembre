@@ -33,6 +33,13 @@ def fbv_shortcut(request):
 class CBV(TemplateView):
     template_name="myviews/index.html"
 
+    def get(self, request: http.HttpRequest, *args: Any, **kwargs: Any) -> http.HttpResponse:
+        context = {
+        'prenoms': prenoms,
+        "custom": "Dans fbv_shortcut"
+        }
+        return render(request, "myviews/index.html", context) 
+
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
         context = super().get_context_data(**kwargs)    
         mycontext = {
