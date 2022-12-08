@@ -50,6 +50,10 @@ class CBV_opti(TemplateView):
 
 
 class CBV_complexe(TemplateView):
+    """Le dictionnaire extra_contexte est (peut-être ?) créé uniquement
+    au lancement de django. La date_extra ne se mettra jamais à jour dans ce cas.
+    """
+
     template_name = "myviews/index.html"
     extra_context = {
         "prenoms": prenoms,
