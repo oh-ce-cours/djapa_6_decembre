@@ -3,6 +3,9 @@ from django.http import HttpResponse
 from django.template import loader
 # Create your views here.
 from django.views.generic import TemplateView
+from typing import Any, Dict
+
+
 prenoms = ["Matthieu", "Pierre", "Ernest"]
 
 def fbv_python(request):
