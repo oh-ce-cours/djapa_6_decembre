@@ -11,7 +11,7 @@ def fbv_python(request):
     return HttpResponse(ul)
 
 def fbv_template(request):
-    template = loader.get_template('polls/index.html')
+    template = loader.get_template('myviews/index.html')
     context = {
         'prenoms': prenoms,
     }
