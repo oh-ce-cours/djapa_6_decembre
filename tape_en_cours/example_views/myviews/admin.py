@@ -13,4 +13,4 @@ class ExempleAdmin(admin.ModelAdmin):
 
 
 # Register your models here.
-admin.site.register(Exemple)
+admin.site.register(Exemple, ExempleAdmin)
