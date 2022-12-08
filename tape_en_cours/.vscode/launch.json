@@ -14,12 +14,6 @@
             ],
             "django": true,
             "justMyCode": true,
-            "debugOptions": [
-                "WaitOnAbnormalExit",
-                "WaitOnNormalExit",
-                "RedirectOutput",
-                "DjangoDebugging"
-            ],
         },
     ]
 }
