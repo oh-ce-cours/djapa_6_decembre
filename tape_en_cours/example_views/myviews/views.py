@@ -30,3 +30,8 @@ def fbv_shortcut(request):
 
 class CBV(TemplateView):
     template_name="myviews/index.html"
+
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        context = super().get_context_data(**kwargs)    
+        print(context)
+        return context
