@@ -29,7 +29,18 @@ def fbv_shortcut(request):
     return render(request, "myviews/index.html", context)
 
 
-class CBV(TemplateView):
+class CBV_verbeux(TemplateView):
+    template_name = "myviews/index.html"
+
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        return {
+            **super().get_context_data(**kwargs),
+            "prenoms": prenoms,
+            "custom": "Dans CBV",
+        }
+
+
+class CBV_opti(TemplateView):
     template_name = "myviews/index.html"
     extra_context = {
         "prenoms": prenoms,
