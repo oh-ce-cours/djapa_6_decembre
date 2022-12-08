@@ -39,6 +39,6 @@ class CBV(TemplateView):
             'prenoms': prenoms,
             "custom": "Dans CBV"
         }
-        context = context.update(mycontext)
+        context.update(mycontext)
         print(context)
         return context
