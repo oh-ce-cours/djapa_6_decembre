@@ -11,7 +11,11 @@ def fbv_python(request):
     return HttpResponse(ul)
 
 def fbv_template(request):
-    pass 
+    template = loader.get_template('polls/index.html')
+    context = {
+        'latest_question_list': latest_question_list,
+    }
+    return HttpResponse(template.render(context, request))
 
 def fbv_shortcut(request):
     pass 
