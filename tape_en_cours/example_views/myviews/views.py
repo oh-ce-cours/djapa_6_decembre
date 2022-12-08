@@ -13,7 +13,7 @@ def fbv_python(request):
 def fbv_template(request):
     template = loader.get_template('polls/index.html')
     context = {
-        'latest_question_list': latest_question_list,
+        'prenoms': prenoms,
     }
     return HttpResponse(template.render(context, request))
 
