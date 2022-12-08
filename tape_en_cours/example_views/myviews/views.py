@@ -36,7 +36,7 @@ class CBV_verbeux(TemplateView):
         return {
             **super().get_context_data(**kwargs),
             "prenoms": prenoms,
-            "custom": "Dans CBV",
+            "custom": "Dans CBV verbeux",
         }
 
 
@@ -44,5 +44,5 @@ class CBV_opti(TemplateView):
     template_name = "myviews/index.html"
     extra_context = {
         "prenoms": prenoms,
-        "custom": "Dans CBV",
+        "custom": "Dans CBV opti",
     }
