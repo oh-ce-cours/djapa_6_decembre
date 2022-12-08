@@ -16,6 +16,7 @@ def fbv_template(request):
     template = loader.get_template('myviews/index.html')
     context = {
         'prenoms': prenoms,
+        "custom": "Dans fbv_template"
     }
     return HttpResponse(template.render(context, request))
 
