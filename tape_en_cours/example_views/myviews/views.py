@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 
+prenoms = ["Matthieu", "Pierre", "Ernest"]
+
 def fbv_python(request):
     pass 
 
