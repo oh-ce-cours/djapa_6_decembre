@@ -9,7 +9,7 @@
 <body>
     <ul>
         {% for prenom in prenoms %}
-            <li>{{ prenom | upper }}</li>
+            <li>{{ prenom | upper | lower }}</li>
         {% endfor %}
     </ul>
 </body>
