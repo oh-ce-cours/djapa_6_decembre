@@ -23,6 +23,8 @@ def fbv_template(request):
 def fbv_shortcut(request):
     context = {
         'prenoms': prenoms,
+        "custom": "Dans fbv_shortcut"
+
     }
     return render(request, "myviews/index.html", context) 
 
