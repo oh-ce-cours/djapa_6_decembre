@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 # Create your views here.
-
+from django.views.generic import TemplateView
 prenoms = ["Matthieu", "Pierre", "Ernest"]
 
 def fbv_python(request):
@@ -28,5 +28,5 @@ def fbv_shortcut(request):
     }
     return render(request, "myviews/index.html", context) 
 
-class cbv:
+class CBV(TemplateView):
     pass 
