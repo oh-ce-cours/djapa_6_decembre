@@ -8,4 +8,5 @@ urlpatterns = [
     path("3", views.fbv_shortcut),
     path("4", views.CBV_verbeux.as_view()),
     path("5", views.CBV_opti.as_view()),
+    path("6", views.CBV_complexe.as_view()),
 ]
