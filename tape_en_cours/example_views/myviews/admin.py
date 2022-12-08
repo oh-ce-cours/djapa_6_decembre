@@ -3,7 +3,7 @@ from .models import Exemple
 
 
 @admin.action(description="Send email")
-def make_published(modeladmin, request, queryset):
+def send_email(modeladmin, request, queryset):
     queryset.update(status="p")
 
 
