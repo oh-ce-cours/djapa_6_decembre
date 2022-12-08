@@ -34,5 +34,8 @@ class CBV(TemplateView):
     template_name="myviews/index.html"
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
-        return {**super().get_context_data(**kwargs), 'prenoms': prenoms,
-            "custom": "Dans CBV"}
+        return {
+            **super().get_context_data(**kwargs), 
+        'prenoms': prenoms,
+            "custom": "Dans CBV"
+            }
