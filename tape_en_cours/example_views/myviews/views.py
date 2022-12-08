@@ -7,6 +7,9 @@ def fbv_python(request):
 
 def fbv_template(request):
     pass 
+
 def fbv_shortcut(request):
     pass 
-cbv
+
+class cbv:
+    pass 
