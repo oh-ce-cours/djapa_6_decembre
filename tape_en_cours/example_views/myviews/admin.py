@@ -8,5 +8,11 @@ def send_email(modeladmin, request, queryset):
         obj.send_email()
 
 
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ["title", "status"]
+    ordering = ["title"]
+    actions = [make_published]
+
+
 # Register your models here.
 admin.site.register(Exemple)
