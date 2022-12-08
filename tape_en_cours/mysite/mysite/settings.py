@@ -101,9 +101,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-import ipdb
-
-ipdb.set_trace()
 PASSWORD_HASHERS = [
     "mysite.hashers.MyPBKDF2PasswordHasher",
     "django.contrib.auth.hashers.Argon2PasswordHasher",
