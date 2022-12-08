@@ -46,3 +46,18 @@ class CBV_opti(TemplateView):
         "prenoms": prenoms,
         "custom": "Dans CBV opti",
     }
+
+
+class CBV_complexe(TemplateView):
+    template_name = "myviews/index.html"
+    extra_context = {
+        "prenoms": prenoms,
+        "custom": "Dans CBV opti",
+    }
+
+    def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
+        return {
+            **super().get_context_data(**kwargs),
+            "prenoms": prenoms,
+            "custom": "Dans CBV complexe",
+        }
