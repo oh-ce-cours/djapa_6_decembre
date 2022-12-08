@@ -5,7 +5,8 @@ from django.shortcuts import render
 prenoms = ["Matthieu", "Pierre", "Ernest"]
 
 def fbv_python(request):
-    pass 
+    inside_ul = "".join([f"<li>{item}</li>" for item in prenoms])
+
 
 def fbv_template(request):
     pass 
