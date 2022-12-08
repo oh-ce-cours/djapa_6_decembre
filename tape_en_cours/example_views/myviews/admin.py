@@ -5,7 +5,7 @@ from .models import Exemple
 @admin.action(description="Send email")
 def send_email(modeladmin, request, queryset):
     for obj in queryset:
-        do_something_with(obj)
+        obj.send_email()
 
 
 # Register your models here.

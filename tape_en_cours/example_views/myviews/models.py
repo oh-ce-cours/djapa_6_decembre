@@ -5,4 +5,4 @@ class Exemple(models.Model):
     email = models.EmailField()
 
     def send_email(self):
-        print("salut")
+        print("salut", self.email)
