@@ -9,7 +9,7 @@
 <body>
     <ul>
         {% for prenom in prenoms %}
-            <li>{{ prenom | upper | lower }}</li>
+            <li>{{ prenom | capitalize }}</li>
         {% endfor %}
     </ul>
 </body>
