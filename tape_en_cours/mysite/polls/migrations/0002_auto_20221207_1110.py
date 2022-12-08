@@ -22,3 +22,13 @@ class Migration(migrations.Migration):
             preserve_default=False,
         ),
     ]
+
+
+class Article(models.Model):
+    title = models.CharField(max_lenght=50)
+    body = models.TextField()
+
+
+for article in parsed_article:
+    # Article.objects.create(**article)
+    Article.objects.create(title=article["title"], body=article["body"])
