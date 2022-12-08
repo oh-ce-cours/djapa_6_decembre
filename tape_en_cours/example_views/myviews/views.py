@@ -54,6 +54,7 @@ class CBV_complexe(TemplateView):
     extra_context = {
         "prenoms": prenoms,
         "custom": "Dans CBV opti",
+        "date_extra": timezone.now(),
     }
 
     def get_context_data(self, **kwargs: Any) -> Dict[str, Any]:
