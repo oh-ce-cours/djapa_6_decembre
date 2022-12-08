@@ -29,4 +29,4 @@ def fbv_shortcut(request):
     return render(request, "myviews/index.html", context) 
 
 class CBV(TemplateView):
-    pass 
+    template_name="myviews/index.html"
