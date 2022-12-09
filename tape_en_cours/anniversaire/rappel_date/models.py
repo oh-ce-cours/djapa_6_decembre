@@ -1,11 +1,14 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
 
 class Notification(models.Model):
-    anniversaire = models.ForeignKey("Anniversaire", related_name = "notifications",on_delete=models.CASCADE)
-    datetime = 
+    anniversaire = models.ForeignKey(
+        "Anniversaire", related_name="notifications", on_delete=models.CASCADE
+    )
+    datetime = models.DateTimeField(default=timezone.now)
 
 
 class Anniversaire(models.Model):
