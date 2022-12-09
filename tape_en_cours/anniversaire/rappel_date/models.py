@@ -19,6 +19,7 @@ class Notification(models.Model):
 
 
 class Anniversaire(models.Model):
+    owner = models.ForeignKey(User)
     email = models.EmailField()
     nom = models.CharField(max_length=50)
     prenom = models.CharField(max_length=50)
