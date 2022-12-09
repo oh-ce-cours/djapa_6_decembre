@@ -40,6 +40,7 @@ class Anniversaire(models.Model):
             anniversaires = cls.objects.all()
         else:
             anniversaires = cls.objects.filter(owner=user)
+        return anniversaires
 
     def __str__(self):
         return f"{self.nom}, {self.prenom}, {self.date}"
