@@ -6,7 +6,7 @@ from django.utils import timezone
 
 class Notification(models.Model):
     anniversaire = models.ForeignKey(
-        "Anniversaire", related_name="efzrty", on_delete=models.CASCADE
+        "Anniversaire", related_name="notifications", on_delete=models.CASCADE
     )
     datetime = models.DateTimeField(default=timezone.now)
     message = models.TextField()
