@@ -3,6 +3,7 @@
     <td>{{anniversaire.date}}</td>
     <td>
         <form action="" method="post">
+            {% csrf_token %}
             <input type="submit" name="upvote" value="Upvote" />
         </form>
     </td>
