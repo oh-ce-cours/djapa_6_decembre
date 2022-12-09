@@ -22,6 +22,7 @@ def index(request):
         form = AnniversaireForm(request.POST, initial={"owner": request.user})
         if form.is_valid():
             anniversaire = form.save()
+            anniversaire.save()
 
     context = {"request": request, "anniversaires": anniversaires, "form": form}
     return render(request, "rappel_date/index.html", context)
