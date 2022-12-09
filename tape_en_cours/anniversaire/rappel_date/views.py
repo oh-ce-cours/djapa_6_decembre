@@ -62,7 +62,7 @@ def bulk(request):
     if request.method == "POST":
         form = UploadFileForm(request.POST, request.FILES)
         if form.is_valid():
-            myfile = request.FILES["myfile"]
+            myfile = request.FILES["file"]
 
             # Read csv file InMemoryUploadedFile
             file = myfile.read().decode("utf-8")
