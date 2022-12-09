@@ -6,7 +6,7 @@ app_name = "anniversaire"
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("details/<int:anniversaire_pk>/", views.details, name="details"),
-    path("details/<int:anniversaire_pk>/<str:nom>", views.details, name="details"),
+    # path("details/<int:anniversaire_pk>/", views.details, name="details"),
+    path("details/<str:nom>/<int:anniversaire_pk>", views.details, name="details"),
     path("envoie_email/<int:anniversaire_pk>", views.notify, name="notify"),
 ]
