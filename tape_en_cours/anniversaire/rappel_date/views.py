@@ -59,26 +59,26 @@ def details(request, anniversaire_pk, nom=""):
     return render(request, "rappel_date/details.html", context)
 
 
-def bulk(request):
-    if request.method == "POST":
-        form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
-            myfile = request.FILES["file"]
+# def bulk(request):
+#     if request.method == "POST":
+#         form = UploadFileForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             myfile = request.FILES["file"]
 
-            # Read csv file InMemoryUploadedFile
-            file = myfile.read().decode("utf-8")
-            reader = csv.DictReader(io.StringIO(file))
+#             # Read csv file InMemoryUploadedFile
+#             file = myfile.read().decode("utf-8")
+#             reader = csv.DictReader(io.StringIO(file))
 
-            # Generate a list comprehension
-            data = [line for line in reader]
-            import ipdb
+#             # Generate a list comprehension
+#             data = [line for line in reader]
+#             import ipdb
 
-            ipdb.set_trace()
+#             ipdb.set_trace()
 
-            # si on a les bons noms de colonnes, on peut créer l'objet directement
-            Anniversaire(**data[0])
+#             # si on a les bons noms de colonnes, on peut créer l'objet directement
+#             Anniversaire(**data[0])
 
-            return HttpResponseRedirect("/success/url/")
-    else:
-        form = UploadFileForm()
-    return render(request, "upload.html", {"form": form})
+#             return HttpResponseRedirect("/success/url/")
+#     else:
+#         form = UploadFileForm()
+#     return render(request, "upload.html", {"form": form})
