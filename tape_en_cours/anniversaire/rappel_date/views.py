@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Anniversaire
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def index(request):
@@ -11,4 +12,4 @@ def index(request):
 
 def notify(request, anniversaire_pk):
     print(anniversaire_pk)
-    anniversaire = get_or_404(Anniversaire, pk=anniversaire_pk)
+    anniversaire = get_object_or_404(Anniversaire, pk=anniversaire_pk)
