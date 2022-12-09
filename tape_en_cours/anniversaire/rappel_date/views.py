@@ -74,6 +74,8 @@ def bulk(request):
             import ipdb
 
             ipdb.set_trace()
+
+            # si on a les bons noms de colonnes, on peut créer l'objet directement
             Anniversaire(**data[0])
 
             return HttpResponseRedirect("/success/url/")
