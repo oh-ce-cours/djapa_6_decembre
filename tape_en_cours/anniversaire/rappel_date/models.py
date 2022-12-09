@@ -28,7 +28,7 @@ class Anniversaire(models.Model):
     nom = models.CharField(max_length=50)
     prenom = models.CharField(max_length=50)
     date = models.DateField()
-    specs = models.FileField(upload_to="annivs")
+    specs = models.FileField(upload_to="annivs", null=True, blank=True)
 
     def send_email(self):
         message = "mon message"
