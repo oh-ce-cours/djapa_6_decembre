@@ -15,6 +15,9 @@ def index(request):
     # else:
     #     anniversaires = Anniversaire.objects.filter(owner=request.user)
     ####
+    import ipdb
+
+    ipdb.set_trace()
     anniversaires = Anniversaire.get_allowed_for_user(request.user)
     context = {
         "request": request,
