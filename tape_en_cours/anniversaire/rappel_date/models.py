@@ -20,3 +20,6 @@ class Anniversaire(models.Model):
 
     def send_email(self):
         print("salut", self.email)
+
+    def __str__(self):
+        return f"{self.nom}, {self.prenom}, {self.date}"
