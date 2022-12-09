@@ -8,4 +8,4 @@ def index(request):
     }
     return render(request, "rappel_date/index.html", context)
 
-def notify(request, pk):
+def notify(request, anniversaire_pk):
