@@ -12,7 +12,7 @@ class Notification(models.Model):
     message = models.TextField()
 
     def __str__(self):
-        return f"{self.anniversaire.nom}, {self.anniversaire.prenom}, {self.anniversaire.date}"
+        return f"{self.anniversaire.nom}, {self.anniversaire.prenom}, {self.datetime}"
 
 
 class Anniversaire(models.Model):
