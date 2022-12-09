@@ -1,7 +1,9 @@
 from django.forms import ModelForm, Form 
+from django import forms
 from .models import Anniversaire
 
 class UploadFile(Form):
+    file = Form.
     
 
 class AnniversaireForm(ModelForm):
