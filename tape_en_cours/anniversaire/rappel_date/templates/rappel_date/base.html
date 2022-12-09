@@ -9,22 +9,10 @@
 </head>
 
 <body>
-    <table>
-        <thead>
-            <tr>
-                <td>email</td>
-                <td>date</td>
-            </tr>
-        </thead>
-        <tbody>
-            {% for anniversaire in anniversaires %}
-            <tr>
-                <td>{{anniversaire.email}}</td>
-                <td>{{anniversaire.date}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+
+    {% block "main_content" %}
+    {% endblock %}
+
 </body>
 
 </html>
