@@ -61,10 +61,19 @@ def details(request, anniversaire_pk, nom=""):
 def bulk(request):
     if request.method == "POST":
         form = UploadFileForm(request.POST, request.FILES)
-        import ipdb
-
-        ipdb.set_trace()
         if form.is_valid():
+            myfile = request.FILES["myfile"]
+
+            # Read csv file InMemoryUploadedFile
+            file = myfile.read().decode("utf-8")
+            reader = csv.DictReader(io.StringIO(file))
+
+            # Generate a list comprehension
+            data = [line for line in reader]
+            import ipdb
+
+            ipdb.set_trace()
+
             return HttpResponseRedirect("/success/url/")
     else:
         form = UploadFileForm()
