@@ -17,14 +17,12 @@
             </tr>
         </thead>
         <tbody>
+            {% for anniversaire in anniversaires %}
             <tr>
-                <td>1</td>
-                <td>2</td>
+                <td>{{anniversaire.email}}</td>
+                <td>{{anniversaire.date}}</td>
             </tr>
-            <tr>
-                <td>3</td>
-                <td>4</td>
-            </tr>
+            {% endfor %}
         </tbody>
     </table>
 
