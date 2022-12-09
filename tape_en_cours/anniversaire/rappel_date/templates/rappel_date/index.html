@@ -1,14 +1,7 @@
 {% extends 'rappel_date/base.html' %}
 
 {% block "main_content" %}
-<table>
-    {% include "rappel_date/parts/table_head.html" %}
-    <tbody>
-        {% for anniversaire in anniversaires %}
-        {% include "rappel_date/parts/table_line.html" %}
-        {% endfor %}
-    </tbody>
-</table>
+
 
 
 
@@ -24,6 +17,14 @@
 
             <div class="row">
                 <div class="col-md-12">
+                    <table>
+                        {% include "rappel_date/parts/table_head.html" %}
+                        <tbody>
+                            {% for anniversaire in anniversaires %}
+                            {% include "rappel_date/parts/table_line.html" %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
                     <table class="table">
                         <thead>
                             <tr>
