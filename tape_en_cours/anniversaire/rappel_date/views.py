@@ -9,6 +9,7 @@ def index(request):
     # MAUVAISE PRATIQUE : on ne veut pas que cette logique soit dans la vue.
     # 1. ce n'est pas testable
     # 2. ce n'est pas factorisable : on doit le recopier partout
+
     # if request.user.is_admin:
     #     anniversaires = Anniversaire.objects.all()
     # else:
