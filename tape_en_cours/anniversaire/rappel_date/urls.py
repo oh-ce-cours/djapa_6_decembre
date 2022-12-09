@@ -5,7 +5,15 @@ from . import views
 app_name = "anniversaire"
 
 urlpatterns = [
-    path("", views.index, name="index"),
-    path("details/<int:anniversaire_pk>/<str:nom>", views.details, name="details"),
-    path("envoie_email/<int:anniversaire_pk>", views.notify, name="notify"),
+    path("", login_required(views.index), name="index"),
+    path(
+        "details/<int:anniversaire_pk>/<str:nom>",
+        login_required(views.details),
+        name="details",
+    ),
+    path(
+        "envoie_email/<int:anniversaire_pk>",
+        login_required(views.notify),
+        name="notify",
+    ),
 ]
