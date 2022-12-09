@@ -9,6 +9,7 @@ class Notification(models.Model):
         "Anniversaire", related_name="notifications", on_delete=models.CASCADE
     )
     datetime = models.DateTimeField(default=timezone.now)
+    message = models.TextField()
 
 
 class Anniversaire(models.Model):
