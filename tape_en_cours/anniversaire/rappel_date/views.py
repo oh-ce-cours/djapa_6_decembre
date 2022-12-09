@@ -61,10 +61,10 @@ def details(request, anniversaire_pk, nom=""):
 def bulk(request):
     if request.method == "POST":
         form = UploadFileForm(request.POST, request.FILES)
-        if form.is_valid():
-            import ipdb
+        import ipdb
 
-            ipdb.set_trace()
+        ipdb.set_trace()
+        if form.is_valid():
             return HttpResponseRedirect("/success/url/")
     else:
         form = UploadFileForm()
