@@ -6,4 +6,4 @@ def index(request):
     context = {
         "anniversaires": Anniversaire.objects.all(),
     }
-    render(request, "rappel_date/index.html", context)
+    render(request, "index.html", context)
