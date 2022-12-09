@@ -1,6 +1,0 @@
-XXXX
-    XXXX
-        
-    XXXXX
-    XXXXXXXXX
-XXXXX
