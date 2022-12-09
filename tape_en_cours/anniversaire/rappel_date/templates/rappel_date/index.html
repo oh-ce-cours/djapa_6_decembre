@@ -23,6 +23,14 @@
         <p>{% translate "Welcome to our page" %}</p>
         {% endlanguage %}
 
+        {% language 'fr' %}
+        {% get_current_language as LANGUAGE_CODE %}
+        <!-- Current language: {{ LANGUAGE_CODE }} -->
+        <p>{% translate "Welcome to our page" %}</p>
+        {% endlanguage %}
+
+
+
     </div>
 
     <section class="jumbotron text-center">
