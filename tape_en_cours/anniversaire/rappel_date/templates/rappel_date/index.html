@@ -2,12 +2,7 @@
 
 {% block "main_content" %}
 <table>
-    <thead>
-        <tr>
-            <td>email</td>
-            <td>date</td>
-        </tr>
-    </thead>
+
     <tbody>
         {% for anniversaire in anniversaires %}
         {% include "rappel_date/parts/table_line.html" %}
