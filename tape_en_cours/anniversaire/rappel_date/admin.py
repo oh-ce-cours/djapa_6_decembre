@@ -14,3 +14,4 @@ class AnniversaireAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Anniversaire, AnniversaireAdmin)
+admin.site.register(Notification)
