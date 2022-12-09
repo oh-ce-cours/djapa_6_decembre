@@ -4,7 +4,8 @@ from django.db import models
 
 
 class Notification(models.Model):
-    anniversaire = models.ForeignKey("Anniversaire", on_delete=models.CASCADE)
+    anniversaire = models.ForeignKey("Anniversaire", related_name = "notifications",on_delete=models.CASCADE)
+    datetime = 
 
 
 class Anniversaire(models.Model):
