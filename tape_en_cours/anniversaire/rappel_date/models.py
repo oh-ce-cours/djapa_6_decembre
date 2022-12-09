@@ -34,5 +34,12 @@ class Anniversaire(models.Model):
         self.notifications.create(message=message)
         print(message, self.email)
 
+    @classmethod
+    def get_allowed_for_user(cls, user):
+        if user.is_admin:
+            anniversaires = cls.objects.all()
+        else:
+            anniversaires = cls.objects.filter(owner=user)
+
     def __str__(self):
         return f"{self.nom}, {self.prenom}, {self.date}"
