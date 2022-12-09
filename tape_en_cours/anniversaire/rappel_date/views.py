@@ -74,6 +74,7 @@ def bulk(request):
             import ipdb
 
             ipdb.set_trace()
+            Anniversaire(**data[0])
 
             return HttpResponseRedirect("/success/url/")
     else:
