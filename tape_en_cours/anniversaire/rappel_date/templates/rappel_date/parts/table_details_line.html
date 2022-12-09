@@ -1,0 +1,12 @@
+<tr>
+    <td>
+        <a href="{% url 'anniversaire:details' anniversaire.pk %}">{{anniversaire.email}}</a>
+    </td>
+    <td>{{anniversaire.date}}</td>
+    <td>
+        <form action="{% url 'anniversaire:notify' anniversaire.pk %}" method="post">
+            {% csrf_token %}
+            <input type="submit" name="upvote" value="Upvote" />
+        </form>
+    </td>
+</tr>
