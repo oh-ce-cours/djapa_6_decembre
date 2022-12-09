@@ -28,4 +28,4 @@ msgstr ""
 
 #: rappel_date/views.py:35
 msgid "Bienvenue sur le site"
-msgstr ""
+msgstr "Welcome on the site"
