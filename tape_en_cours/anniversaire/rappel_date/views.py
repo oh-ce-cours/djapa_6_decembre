@@ -32,7 +32,7 @@ def index(request):
         "request": request,
         "anniversaires": anniversaires,
         "form": form,
-        message: _("Bienvenue sur le site"),
+        "message": _("Bienvenue sur le site"),
     }
     return render(request, "rappel_date/index.html", context)
 
