@@ -4,9 +4,10 @@ from django.shortcuts import get_object_or_404
 
 # Create your views here.
 def index(request):
+    anniversaires = Anniversaire.objects.filter(owner=request.user)
     context = {
         "request": request,
-        "anniversaires": Anniversaire.objects.filter(owner=request.user),
+        "anniversaires": anniversaires,
     }
     return render(request, "rappel_date/index.html", context)
 
