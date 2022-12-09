@@ -2,7 +2,7 @@
     <td>{{anniversaire.email}}</td>
     <td>{{anniversaire.date}}</td>
     <td>
-        <form action="/notify/1" method="post">
+        <form action="/notify/{{ anniversaire.pk }}" method="post">
             {% csrf_token %}
             <input type="submit" name="upvote" value="Upvote" />
         </form>
