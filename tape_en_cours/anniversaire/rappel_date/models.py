@@ -36,6 +36,7 @@ class Anniversaire(models.Model):
 
     @classmethod
     def get_allowed_for_user(cls, user):
+        """ """
         if user.is_admin:
             anniversaires = cls.objects.all()
         else:
