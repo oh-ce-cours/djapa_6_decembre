@@ -11,6 +11,9 @@ class Notification(models.Model):
     datetime = models.DateTimeField(default=timezone.now)
     message = models.TextField()
 
+    def __str__(self):
+        return f"{self.nom}, {self.prenom}, {self.date}"
+
 
 class Anniversaire(models.Model):
     email = models.EmailField()
@@ -22,4 +25,4 @@ class Anniversaire(models.Model):
         print("salut", self.email)
 
     def __str__(self):
-        return
+        return f"{self.nom}, {self.prenom}, {self.date}"
