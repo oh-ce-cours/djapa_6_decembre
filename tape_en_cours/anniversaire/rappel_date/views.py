@@ -28,7 +28,12 @@ def index(request):
         form = AnniversaireForm(initial={"owner": request.user})
 
     anniversaires = Anniversaire.get_allowed_for_user(request.user)
-    context = {"request": request, "anniversaires": anniversaires, "form": form}
+    context = {
+        "request": request,
+        "anniversaires": anniversaires,
+        "form": form,
+        message: _("Bienvenue sur le site"),
+    }
     return render(request, "rappel_date/index.html", context)
 
 
