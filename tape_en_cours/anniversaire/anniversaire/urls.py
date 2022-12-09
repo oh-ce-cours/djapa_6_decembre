@@ -24,4 +24,4 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),  # new
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-print(f"{settings.MEDIA_URL=}")
+print(f"{settings.MEDIA_URL}")
