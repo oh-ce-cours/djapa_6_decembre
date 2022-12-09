@@ -44,3 +44,11 @@ class Anniversaire(models.Model):
 
     def __str__(self):
         return f"{self.nom}, {self.prenom}, {self.date}"
+
+
+def allowed_anniversaire_for_user(user):
+    if user.is_admin:
+        anniversaires = Anniversaire.objects.all()
+    else:
+        anniversaires = Anniversaire.objects.filter(owner=user)
+    return anniversaires
