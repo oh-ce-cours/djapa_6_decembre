@@ -27,15 +27,16 @@
                         </tbody>
                     </table>
                 </div>
+
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <input type="submit" name="create" value="Nouvel anniversaire" />
+
+                </form>
             </div>
         </div>
 
-        <form action="" method="POST">
-            {% csrf_token %}
-            {{ form | crispy }}
-            <input type="submit" name="create" value="Nouvel anniversaire" />
-
-        </form>
     </div>
 </main>
 
