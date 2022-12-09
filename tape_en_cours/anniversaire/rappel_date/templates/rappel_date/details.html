@@ -9,13 +9,14 @@
             <h1 class="jumbotron-heading">Details des envois pour {{ item.prenom }}, {{ item.nom }}</h1>
     </section>
 
-    <p>
-        Retourner à <a href="{% url 'anniversaire:index' %}">l'acceuil </a>
-    </p>
+
 
     <div class=" py-5 ">
         <div class="container">
             <div class="row">
+                <p>
+                    Retourner à <a href="{% url 'anniversaire:index' %}">l'acceuil </a>
+                </p>
                 <div class="col-md-12">
                     <table class="table">
                         {% include "rappel_date/parts/table_details_head.html" %}
