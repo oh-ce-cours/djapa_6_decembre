@@ -24,10 +24,6 @@
                 {% for language in languages %}
 
                 <option value="{{ language.code }}" data-content='<img src="/static/images/flags/{{ language.code }}.gif"></span>
-                <span style="display:inline-block; width:100px; padding-left: 10px; text-shadow:none">
-                  {{ language.name_local }}
-                  <!-- span style="color:#999;">&nbsp;[{{ language.code }}]</span -->
-                </span>'>
                     {{ language.code }}
                 </option>
 
