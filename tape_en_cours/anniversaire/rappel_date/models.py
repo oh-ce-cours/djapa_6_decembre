@@ -23,7 +23,7 @@ class Anniversaire(models.Model):
 
     def send_email(self):
         message = "mon message"
-        self.notification.create(message=message)
+        self.notifications.create(message=message)
         print(message, self.email)
 
     def __str__(self):
