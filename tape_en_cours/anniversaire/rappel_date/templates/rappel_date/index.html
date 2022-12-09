@@ -2,7 +2,7 @@
 
 {% block "main_content" %}
 <table>
-
+    {% include "rappel_date/parts/table_head.html" %}
     <tbody>
         {% for anniversaire in anniversaires %}
         {% include "rappel_date/parts/table_line.html" %}
