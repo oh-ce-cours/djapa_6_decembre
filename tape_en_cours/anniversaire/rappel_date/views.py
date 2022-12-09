@@ -19,10 +19,7 @@ def index(request):
     ####
     anniversaires = Anniversaire.get_allowed_for_user(request.user)
     form = AnniversaireForm()
-    context = {
-        "request": request,
-        "anniversaires": anniversaires,
-    }
+    context = {"request": request, "anniversaires": anniversaires, "form": form}
     return render(request, "rappel_date/index.html", context)
 
 
