@@ -14,7 +14,7 @@
             <h1 class="jumbotron-heading">
                 Anniversaires pour {{ request.user.username | capfirst}}
                 {% blocktrans %}
-                Anniversaires pour request.user.username
+                Anniversaires pour {{ request.user.username }}
                 {% endblocktrans %}
             </h1>
             <h2>{{ message }}</h2>
