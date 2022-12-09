@@ -37,7 +37,7 @@ class Anniversaire(models.Model):
     @classmethod
     def get_allowed_for_user(cls, user):
         """ """
-        if user.is_admin:
+        if user.is_superuser:
             anniversaires = cls.objects.all()
         else:
             anniversaires = cls.objects.filter(owner=user)
