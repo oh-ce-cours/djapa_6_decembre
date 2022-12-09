@@ -6,5 +6,5 @@ app_name = "anniversaire"
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("notify/<int:anniversaire_pk>", views.notify, name="notify"),
+    path("notify/<int:anniversaire_pk>", views.notify, name="serrdfgfs"),
 ]
