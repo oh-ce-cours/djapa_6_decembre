@@ -18,7 +18,11 @@ def index(request):
     #     anniversaires = Anniversaire.objects.filter(owner=request.user)
     ####
     anniversaires = Anniversaire.get_allowed_for_user(request.user)
-    form = AnniversaireForm()
+    if request.method == "POST":
+        form = AnniversaireForm(request.POST, initial={"owner": request.user})
+        if form.is_valid():
+            anniversaire = form.save()
+
     context = {"request": request, "anniversaires": anniversaires, "form": form}
     return render(request, "rappel_date/index.html", context)
 
