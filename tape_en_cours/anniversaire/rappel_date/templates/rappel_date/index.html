@@ -29,8 +29,8 @@
         </div>
 
         <form action="" method="POST">
-            {{ form.as_ul }}
             {% csrf_token %}
+            {{ form |crispy }}
             <input type="submit" name="create" value="Nouvel anniversaire" />
 
         </form>
