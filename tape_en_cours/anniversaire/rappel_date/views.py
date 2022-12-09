@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-
+import csv
+import io
 from rappel_date.forms import AnniversaireForm, UploadFileForm
 from .models import Anniversaire
 from django.shortcuts import get_object_or_404
