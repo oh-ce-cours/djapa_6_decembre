@@ -7,3 +7,5 @@ def index(request):
         "anniversaires": Anniversaire.objects.all(),
     }
     return render(request, "rappel_date/index.html", context)
+
+def notify(request, pk):
