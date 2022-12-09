@@ -1,10 +1,11 @@
-from django.forms import ModelForm, Form 
+from django.forms import ModelForm, Form
 from django import forms
 from .models import Anniversaire
 
+
 class UploadFile(Form):
-    file = Form.
-    
+    file = forms.FileField()
+
 
 class AnniversaireForm(ModelForm):
     class Meta:
