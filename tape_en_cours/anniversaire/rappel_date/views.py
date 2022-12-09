@@ -19,9 +19,10 @@ def index(request):
     ####
     anniversaires = Anniversaire.get_allowed_for_user(request.user)
     if request.method == "POST":
-        form = AnniversaireForm(request.POST, initial={"owner": request.user})
+        form = AnniversaireForm(request.POST)
         if form.is_valid():
-            anniversaire = form.save()
+            anniversaire = form.save(commit=False)
+            anniversaire.owner = request.user
             anniversaire.save()
     else:
         form = AnniversaireForm(initial={"owner": request.user})
