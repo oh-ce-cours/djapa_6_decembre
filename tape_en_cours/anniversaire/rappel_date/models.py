@@ -22,7 +22,9 @@ class Anniversaire(models.Model):
     date = models.DateField()
 
     def send_email(self):
-        print("salut", self.email)
+        message = "mon message"
+        self.notification.create(message=message)
+        print(message, self.email)
 
     def __str__(self):
         return f"{self.nom}, {self.prenom}, {self.date}"
