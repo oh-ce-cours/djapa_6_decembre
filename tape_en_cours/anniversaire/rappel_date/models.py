@@ -47,7 +47,10 @@ class Anniversaire(models.Model):
 
 
 def allowed_anniversaire_for_user(user):
-    """Cette fonction permet de faire la même chose que la méthode de classe dans Anniversaire, définie plus haut. Juste elle est dans une fonction et pas dans la classe."""
+    """Cette fonction permet de faire la même chose que
+    la méthode de classe dans Anniversaire, définie
+    plus haut. Juste elle est dans une fonction
+    et pas dans la classe."""
     if user.is_admin:
         anniversaires = Anniversaire.objects.all()
     else:
