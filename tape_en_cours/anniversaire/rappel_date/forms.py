@@ -3,7 +3,7 @@ from django import forms
 from .models import Anniversaire
 
 
-class UploadFile(Form):
+class UploadFileForm(Form):
     file = forms.FileField()
 
 
