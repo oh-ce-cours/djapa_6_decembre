@@ -14,8 +14,8 @@ class Notification(models.Model):
 
 class Anniversaire(models.Model):
     email = models.EmailField()
-    nom = models.CharField(50)
-    prenom = models.CharField(50)
+    nom = models.CharField(max_length=50)
+    prenom = models.CharField(max_length=50)
     date = models.DateField()
 
     def send_email(self):
