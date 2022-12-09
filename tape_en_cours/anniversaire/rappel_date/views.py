@@ -7,6 +7,9 @@ def index(request):
     context = {
         "anniversaires": Anniversaire.objects.all(),
     }
+    import ipdb
+
+    ipdb.set_trace()
     return render(request, "rappel_date/index.html", context)
 
 
