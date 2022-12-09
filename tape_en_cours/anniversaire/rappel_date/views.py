@@ -17,7 +17,7 @@ def notify(request, anniversaire_pk):
     return redirect("anniversaire:index")
 
 
-def details(request, anniversaire_pk):
+def details(request, anniversaire_pk, nom):
     anniversaire = get_object_or_404(Anniversaire, pk=anniversaire_pk)
     context = {"item": anniversaire}
     return render(request, "rappel_date/details.html", context)
