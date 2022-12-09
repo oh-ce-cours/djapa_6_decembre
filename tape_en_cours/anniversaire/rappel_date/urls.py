@@ -18,3 +18,9 @@ urlpatterns = [
         name="notify",
     ),
 ]
+
+# @login_required
+# def totot():
+#     pass
+
+# totot = login_required(totot)
