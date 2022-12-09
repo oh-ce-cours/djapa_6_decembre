@@ -29,7 +29,7 @@
         </div>
 
         <form action="" method="POST">
-            {{ form }}
+            {{ form.as_div }}
             {% csrf_token %}
             <input type="submit" name="create" value="Nouvel anniversaire" />
 
