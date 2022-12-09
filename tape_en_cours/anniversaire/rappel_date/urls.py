@@ -17,6 +17,7 @@ urlpatterns = [
         login_required(views.notify),
         name="notify",
     ),
+    path("bulk_create", login_required(views.bulk), name="bulk"),
 ]
 
 # @login_required
