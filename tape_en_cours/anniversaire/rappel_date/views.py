@@ -32,6 +32,7 @@ def index(request):
         "request": request,
         "anniversaires": anniversaires,
         "form": form,
+        "fileform": UploadFileForm(),
         "message": _("Bienvenue sur le site"),
     }
     return render(request, "rappel_date/index.html", context)
