@@ -16,6 +16,7 @@ def index(request):
     #     anniversaires = Anniversaire.objects.filter(owner=request.user)
     ####
     anniversaires = Anniversaire.get_allowed_for_user(request.user)
+    form = AnniversaireForm()
     context = {
         "request": request,
         "anniversaires": anniversaires,
