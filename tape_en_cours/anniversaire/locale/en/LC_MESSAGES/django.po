@@ -24,7 +24,7 @@ msgid ""
 "\n"
 "                Anniversaires pour %(request.user.username)s\n"
 "                "
-msgstr ""
+msgstr "Birthdays for %(request.user.username)"
 
 #: rappel_date/views.py:35
 msgid "Bienvenue sur le site"
