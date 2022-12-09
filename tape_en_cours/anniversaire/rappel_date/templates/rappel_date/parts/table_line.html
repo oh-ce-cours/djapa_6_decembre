@@ -1,5 +1,5 @@
 <tr>
-    <td>{{anniversaire.email}}</td>
+    <td><a>{{anniversaire.email}}</a></td>
     <td>{{anniversaire.date}}</td>
     <td>
         <form action="{% url 'anniversaire:notify' anniversaire.pk %}" method="post">
