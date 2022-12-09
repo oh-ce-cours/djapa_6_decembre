@@ -67,7 +67,10 @@
                     <form action="{% url 'anniversaire:bulk_create' %}" method="POST">
                         {% csrf_token %}
 
-                        fileform
+                        {{ fileform }}
+                        <input type="submit" name="create" value="Bulk update" />
+
+                    </form>
                 </div>
             </div>
         </div>
