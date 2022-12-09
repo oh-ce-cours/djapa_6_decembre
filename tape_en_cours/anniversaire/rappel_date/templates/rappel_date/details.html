@@ -1,0 +1,34 @@
+{% extends 'rappel_date/base.html' %}
+
+{% block "main_content" %}
+
+
+
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Anniversaires</h1>
+    </section>
+
+    <div class=" py-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table">
+                        {% include "rappel_date/parts/table_head.html" %}
+                        <tbody>
+                            {% for anniversaire in anniversaires %}
+                            {% include "rappel_date/parts/table_line.html" %}
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+{% endblock "main_content" %}
