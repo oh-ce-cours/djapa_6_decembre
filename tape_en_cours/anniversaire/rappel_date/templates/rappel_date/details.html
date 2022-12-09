@@ -16,7 +16,7 @@
                     <table class="table">
                         {% include "rappel_date/parts/table_details_head.html" %}
                         <tbody>
-                            {% for anniversaire in anniversaires %}
+                            {% for envoi in item.notifications.all %}
                             {% include "rappel_date/parts/table_line.html" %}
                             {% endfor %}
                         </tbody>
