@@ -14,4 +14,4 @@ def notify(request, anniversaire_pk):
     if request.method == "POST":
         anniversaire = get_object_or_404(Anniversaire, pk=anniversaire_pk)
         anniversaire.send_email()
-    return redirect("index")
+    return redirect("anniversaire:index")
