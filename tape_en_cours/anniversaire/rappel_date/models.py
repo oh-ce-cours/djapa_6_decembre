@@ -11,6 +11,9 @@ class Notification(models.Model):
     datetime = models.DateTimeField(default=timezone.now)
     message = models.TextField()
 
+    class Meta:
+        verbose_name = "erhtrhfg"
+
     def __str__(self):
         return f"{self.anniversaire.nom}, {self.anniversaire.prenom}, {self.datetime}"
 
