@@ -11,3 +11,4 @@ def index(request):
 
 def notify(request, anniversaire_pk):
     print(anniversaire_pk)
+    anniversaire = get_or_404(Anniversaire, pk=anniversaire_pk)
