@@ -30,7 +30,7 @@ msgstr "French"
 #: rappel_date/templates/rappel_date/index.html:23
 #: rappel_date/templates/rappel_date/index.html:29
 msgid "Welcome to our page"
-msgstr ""
+msgstr "Bienvenue sur notre page"
 
 #: rappel_date/templates/rappel_date/index.html:40
 #, python-format
