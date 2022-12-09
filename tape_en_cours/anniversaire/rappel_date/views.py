@@ -19,3 +19,4 @@ def notify(request, anniversaire_pk):
 
 def details(request, anniversaire_pk):
     anniversaire = get_object_or_404(Anniversaire, pk=anniversaire_pk)
+    return render(request, "rappel_date/index.html", context)
