@@ -12,7 +12,7 @@ class Notification(models.Model):
     message = models.TextField()
 
     class Meta:
-        plural_verbose_name = "Real estate properties"
+        verbose_name_plural = "Real estate properties"
 
     def __str__(self):
         return f"{self.anniversaire.nom}, {self.anniversaire.prenom}, {self.datetime}"
