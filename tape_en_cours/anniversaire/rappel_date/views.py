@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def index(request):
     context = {
-        "anniversaires": Anniversaire.objects.filter(),
+        "anniversaires": Anniversaire.objects.filter(owner=request.user),
     }
     return render(request, "rappel_date/index.html", context)
 
