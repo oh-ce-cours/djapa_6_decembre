@@ -20,11 +20,11 @@ msgstr ""
 
 #: anniversaire/settings.py:112
 msgid "English"
-msgstr ""
+msgstr "English"
 
 #: anniversaire/settings.py:113
 msgid "French"
-msgstr ""
+msgstr "French"
 
 #: rappel_date/templates/rappel_date/index.html:16
 #, python-format
